@@ -4,7 +4,7 @@ if (fs.existsSync(".env"))
   require("dotenv").config({ path: __dirname + "/.env" });
 
 //=======[dependencies]====================//
-global.SESSION_ID = process.env.SESSION_ID || "";
+global.SESSION_ID = process.env.SESSION_ID || "eyJub2lzZUtleSI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiU0RUVG05YThBOXVWTm0zSGFmTktsMnVrc3BDVjdXYjQyZmxIRE5pUXVXZz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoid0FuMis4c0luRW8xTDlDQWw0NGUyNmdaMlVMUk04cDlXcTFOaElKbWxrWT0ifX0sInBhaXJpbmdFcGhlbWVyYWxLZXlQYWlyIjp7InByaXZhdGUiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJRR1RiUUVNV2JCQzBFYkx6d3BBSFU0YzFTRFVBUE9yOTZHSE1rVUs0UUdFPSJ9LCJwdWJsaWMiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJZNmp6L21Hd1NzS1lYQ2xGb1prYlFTNXVGNVlpZzJYRnQ3dDR3c3I2a2cwPSJ9fSwic2lnbmVkSWRlbnRpdHlLZXkiOnsicHJpdmF0ZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IjhGYVJSK2x5cXQ1eHVJQkdhYVFyTkFzczdsSE9HcDAzcmVkSXZKcURDVTg9In0sInB1YmxpYyI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IjBnUUFIWS9WU25xTlFydDdOc2RTSk4wV2tLb29yTkpEQ1F4Ym02MzFsQW89In19LCJzaWduZWRQcmVLZXkiOnsia2V5UGFpciI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiOEtMSC93cG9GK1hsM1RJMVg5QU13bUdmcm5LOEx2Z3o5VFAwME5DVjhXdz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoibmQ5M1VsWDNGVDBZZ0JYQ28yazUrNys3OS9SQWhKMGNTWHdGOEMycHlDTT0ifX0sInNpZ25hdHVyZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6ImtMeVhoalpJclRXTGxXRk9QMXRIQTdXcmxVRGtJQlFlNVpvT0VMQkZVUG5Ka3k1dFpkai9mOTZBc3VNUVJqbC9pTTNlKzlkK1JSVjhsYUVUaHM0L0FnPT0ifSwia2V5SWQiOjF9LCJyZWdpc3RyYXRpb25JZCI6MjIwLCJhZHZTZWNyZXRLZXkiOiJSd3p1TlR3T2ZWdTF6WE9WVEIwQ29MODJsNzE2NzdlTGM1SnhnVHA1Y2hvPSIsInByb2Nlc3NlZEhpc3RvcnlNZXNzYWdlcyI6W10sIm5leHRQcmVLZXlJZCI6MzEsImZpcnN0VW51cGxvYWRlZFByZUtleUlkIjozMSwiYWNjb3VudFN5bmNDb3VudGVyIjowLCJhY2NvdW50U2V0dGluZ3MiOnsidW5hcmNoaXZlQ2hhdHMiOmZhbHNlfSwiZGV2aWNlSWQiOiI1VWdIcVhwMFFoaThPZmtjWm1EM19BIiwicGhvbmVJZCI6IjUwNGZmZmVmLTc3ZTctNDllOC05M2ZkLTcyZjBjMWZlODMwMyIsImlkZW50aXR5SWQiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJXR3YwaytQZk45bVYvMWt4Y1QyWmhuT05MWGc9In0sInJlZ2lzdGVyZWQiOnRydWUsImJhY2t1cFRva2VuIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiYW1tR2xHTTBtemtMMFIwM2w2L20zUGw3K2UwPSJ9LCJyZWdpc3RyYXRpb24iOnt9LCJwYWlyaW5nQ29kZSI6IlJZV1NLUjZIIiwibWUiOnsiaWQiOiI5NDc4MTIyNjE0NDo3M0BzLndoYXRzYXBwLm5ldCIsIm5hbWUiOiLwnZCV8J2QiPCdkIzwnZCUIn0sImFjY291bnQiOnsiZGV0YWlscyI6IkNLU2pyTXNERUovbDViVUdHQU1nQUNnQSIsImFjY291bnRTaWduYXR1cmVLZXkiOiJZWlo2SVQ1ajJONTVuR2w5L05YTjZYaGFVTVVEWk1ZMGRMdVdCK1FUOXlVPSIsImFjY291bnRTaWduYXR1cmUiOiJKdmpRbDNiR2N5dXBmVGQ5aHNmbjYrclgvd1F0RlR6NTc1MXIrOEVJVW9YeDFyWERwbkRKMzhaM3lQcWk4MEx5dXBTRUFDcENlZktvaXZ2Y05rdDhCZz09IiwiZGV2aWNlU2lnbmF0dXJlIjoiQU40K21kdVZ6cHhFMHVnQUVZSEtlTHd3eVZxOTdLcFVIUHZEQzJOL29MYVZTSXIxQnp2dnEvL3p3QldnbWNYNFBhUDcrbzFnOTFGakxKb2RmYVFURGc9PSJ9LCJzaWduYWxJZGVudGl0aWVzIjpbeyJpZGVudGlmaWVyIjp7Im5hbWUiOiI5NDc4MTIyNjE0NDo3M0BzLndoYXRzYXBwLm5ldCIsImRldmljZUlkIjowfSwiaWRlbnRpZmllcktleSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IkJXR1dlaUUrWTlqZWVaeHBmZnpWemVsNFdsREZBMlRHTkhTN2xnZmtFL2NsIn19XSwicGxhdGZvcm0iOiJzbWJhIiwibGFzdEFjY291bnRTeW5jVGltZXN0YW1wIjoxNzIzNDI5NTQ3fQ==";
 global.MONGODB = process.env.MONGODB_URI || "";
 global.DATABASE_URL = process.env.DATABASE_URL || "";
 global.sudo = process.env.SUDO
@@ -24,14 +24,14 @@ global.userImages =
 
 module.exports = {
   menu: process.env.MENU || "",
-  HANDLERS: process.env.PREFIX || ".",
+  HANDLERS: process.env.PREFIX || ",",
   BRANCH: process.env.BRANCH || "main",
   VERSION: process.env.VERSION || "1.0.0",
   caption: process.env.CAPTION || "`RCD-MD`",
   author: process.env.PACK_AUTHER || "RCD-MD",
   packname: process.env.PACK_NAME || "RCD",
   botname: process.env.BOT_NAME || "RCD-MD",
-  ownername: process.env.OWNER_NAME || "RCD",
+  ownername: process.env.OWNER_NAME || "V ɪ  m u  🐼💗🖇️",
   errorChat: process.env.ERROR_CHAT || "",
   KOYEB_API: process.env.KOYEB_API || "false",
   REMOVE_BG_KEY: process.env.REMOVE_BG_KEY || "",
@@ -42,7 +42,7 @@ module.exports = {
   HEROKU: process.env.HEROKU_APP_NAME && process.env.HEROKU_API_KEY,
   aitts_Voice_Id: process.env.AITTS_ID || "37",
   ELEVENLAB_API_KEY: process.env.ELEVENLAB_API_KEY || "",
-  WORKTYPE: process.env.WORKTYPE || process.env.MODE || "public",
+  WORKTYPE: process.env.WORKTYPE || process.env.MODE || "private",
   LANG: (process.env.THEME || "WhatsApp").toUpperCase(),
 };
 global.port = process.env.PORT;
